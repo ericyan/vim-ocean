@@ -18,22 +18,31 @@ let s:gui0D = "#8fa1b3"
 let s:gui0E = "#b48ead"
 let s:gui0F = "#ab7967"
 
-let s:cterm00 = 23
-let s:cterm01 = 59
-let s:cterm02 = 59
-let s:cterm03 = 60
-let s:cterm04 = 145
-let s:cterm05 = 152
-let s:cterm06 = 188
-let s:cterm07 = 15
-let s:cterm08 = 131
-let s:cterm09 = 173
-let s:cterm0A = 186
-let s:cterm0B = 144
-let s:cterm0C = 109
-let s:cterm0D = 109
-let s:cterm0E = 139
-let s:cterm0F = 137
+let s:cterm00 = "00"
+let s:cterm03 = "08"
+let s:cterm05 = "07"
+let s:cterm07 = "15"
+let s:cterm08 = "01"
+let s:cterm0A = "03"
+let s:cterm0B = "02"
+let s:cterm0C = "06"
+let s:cterm0D = "04"
+let s:cterm0E = "05"
+if exists('base16colorspace') && base16colorspace == "256"
+  let s:cterm01 = "18"
+  let s:cterm02 = "19"
+  let s:cterm04 = "20"
+  let s:cterm06 = "21"
+  let s:cterm09 = "16"
+  let s:cterm0F = "17"
+else
+  let s:cterm01 = "10"
+  let s:cterm02 = "11"
+  let s:cterm04 = "12"
+  let s:cterm06 = "13"
+  let s:cterm09 = "09"
+  let s:cterm0F = "14"
+endif
 
 let s:N1   = [ s:gui01, s:gui0B, s:cterm01, s:cterm0B ]
 let s:N2   = [ s:gui06, s:gui02, s:cterm06, s:cterm02 ]
