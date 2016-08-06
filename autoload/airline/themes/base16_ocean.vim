@@ -69,6 +69,21 @@ let s:IA2   = [ s:gui02, s:gui01, s:cterm02, s:cterm01 ]
 let s:IA3   = [ s:gui02, s:gui01, s:cterm02, s:cterm01 ]
 let g:airline#themes#base16_ocean#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 
+" Warnings and errors
+let s:WA = airline#themes#get_highlight2(['WarningMsg', 'bg'], ['WarningMsg', 'fg'], 'bold')
+let s:WA = [ s:WA[0], s:WA[1], s:WA[2], s:WA[3] ]
+let g:airline#themes#base16_ocean#palette.normal.airline_warning = s:WA
+let g:airline#themes#base16_ocean#palette.insert.airline_warning = s:WA
+let g:airline#themes#base16_ocean#palette.visual.airline_warning = s:WA
+let g:airline#themes#base16_ocean#palette.replace.airline_warning = s:WA
+
+let s:ER = airline#themes#get_highlight2(['ErrorMsg', 'bg'], ['ErrorMsg', 'fg'], 'bold')
+let s:ER = [ s:ER[0], s:ER[1], s:ER[2], s:ER[3] ]
+let g:airline#themes#base16_ocean#palette.normal.airline_error = s:ER
+let g:airline#themes#base16_ocean#palette.insert.airline_error = s:ER
+let g:airline#themes#base16_ocean#palette.visual.airline_error = s:ER
+let g:airline#themes#base16_ocean#palette.replace.airline_error = s:ER
+
 " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
 " variable so that related functionality is loaded iff the user is using
 " ctrlp. Note that this is optional, and if you do not define ctrlp colors
