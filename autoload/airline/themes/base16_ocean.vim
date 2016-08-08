@@ -69,6 +69,16 @@ let s:IA2   = [ s:gui02, s:gui01, s:cterm02, s:cterm01 ]
 let s:IA3   = [ s:gui02, s:gui01, s:cterm02, s:cterm01 ]
 let g:airline#themes#base16_ocean#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 
+" Accents
+let g:airline#themes#base16_ocean#palette.accents = {
+  \ 'red': airline#themes#get_highlight('Identifier'),
+  \ 'green': airline#themes#get_highlight('String'),
+  \ 'blue': airline#themes#get_highlight('Function'),
+  \ 'yellow': airline#themes#get_highlight('Label'),
+  \ 'orange': airline#themes#get_highlight('Constant'),
+  \ 'purple': airline#themes#get_highlight('Conditional'),
+  \ }
+
 " Warnings and errors
 let s:WA = airline#themes#get_highlight2(['WarningMsg', 'bg'], ['WarningMsg', 'fg'], 'bold')
 let s:WA = [ s:WA[0], s:WA[1], s:WA[2], s:WA[3] ]
