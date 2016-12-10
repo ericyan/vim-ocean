@@ -1,3 +1,8 @@
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+  set t_Co=16
+endif
+
 " Set colour scheme
 set background=dark
 let base16colorspace=256
